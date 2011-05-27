@@ -1,0 +1,2 @@
+switches= -m5 -mdG -r -ol -t -tl -x".DS_Store"
+

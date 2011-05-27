@@ -1,0 +1,39 @@
+[alias]
+  br = branch
+  ci = commit
+  co = checkout
+  dc = diff --cached
+  l = log --pretty='format:%C(yellow)%h%x09%C(cyan)%ai%x09%C(red)%aN%Creset%x09%s'
+  lt = log --pretty='format:%C(yellow)%h %C(cyan)%ar %C(green)%d %C(red)%aN %Creset%s'
+  st = status
+[branch]
+  autosetuprebase = always
+[color]
+  branch = auto
+  diff = auto
+  grep = auto
+  interactive = auto
+  status = auto
+  ui = auto
+[color "diff"]
+  whitespace = red reverse
+[core]
+  excludesfile = ~/.gitignore
+  pager = less -FRX
+[diff]
+  guitool = gvimdiff
+  tool = gvimdiff
+[difftool]
+  prompt = false
+[gui]
+  fontdiff = -family Menlo -size 10 -weight normal -slant roman -underline 0 -overstrike 0
+[merge]
+  tool = gvimdiff
+[push]
+  default = upstream
+[rebase]
+  stat = true
+[user]
+  name = Alex Muntean
+  # email = (set via $EMAIL)
+
