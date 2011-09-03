@@ -5,6 +5,7 @@
   dc = diff --cached
   l = log --pretty='format:%C(yellow)%h%x09%C(cyan)%ai%x09%C(red)%aN%Creset%x09%s'
   lt = log --pretty='format:%C(yellow)%h %C(cyan)%ar %C(green)%d %C(red)%aN %Creset%s'
+  spp = !git stash && git pull && git stash pop
   st = status
 [branch]
   autosetuprebase = always
