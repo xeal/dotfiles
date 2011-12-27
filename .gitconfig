@@ -1,5 +1,6 @@
 [alias]
   br = branch
+  catchup = log -p --reverse --topo-order --first-parent -m
   ci = commit
   co = checkout
   dc = diff --cached
