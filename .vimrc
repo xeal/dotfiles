@@ -123,6 +123,9 @@ let g:CommandTMaxFiles = 20000
 let g:syntastic_enable_signs = 1
 let g:syntastic_auto_loc_list = 1
 
+" Textile
+let g:TextileBrowser="Google Chrome"
+
 " ZenCoding
 let g:user_zen_settings = {
 \  'indentation' : '  '
