@@ -56,6 +56,7 @@ export LESS='-i'
 export LSCOLORS=ExGxBxDxCxEgEdxbxgEcEd
 
 export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:$PATH
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 export PGDATA='/opt/local/var/db/postgresql90/defaultdb'
 
@@ -70,10 +71,4 @@ export TERM='xterm-color'
 TITLEBAR='\[\033]0;\w\007\]'
 PROMPT='\[\033[0;31m\]\u@\h\[\033[0m\]:\[\033[0;32m\]\w\[\033[0m\]$(__git_ps1 "(%s)")\$ '
 PS1="${TITLEBAR}${PROMPT}"
-
-
-# RVM (rvm.beginrescueend.com)
-# ############################
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # Load RVM into a shell session *as a function*
 
