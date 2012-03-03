@@ -1,5 +1,6 @@
 [alias]
   br = branch
+  bv = branch -vv
   catchup = log -p --reverse --topo-order --first-parent -m
   ci = commit
   co = checkout
@@ -8,7 +9,9 @@
   lg = log --graph --pretty='format:%C(yellow)%h%C(green)%d %Creset%s %C(red)%aN %C(cyan)%ar%Creset'
   lgd = log --oneline --graph --decorate
   spp = !git stash && git pull && git stash pop
+  ss = status --short
   st = status
+  unstage = reset HEAD
 [branch]
   autosetuprebase = always
 [color]
