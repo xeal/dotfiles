@@ -62,8 +62,6 @@ export PGDATA='/opt/local/var/db/postgresql90/defaultdb'
 
 export RAILS_ENV=development
 
-export TERM='xterm-color'
-
 
 # Prompt
 # ######
