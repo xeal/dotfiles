@@ -115,6 +115,7 @@ let g:LustyExplorerSuppressRubyWarning = 1
 
 " NERD tree
 nnoremap <F8> :NERDTreeToggle<CR>
+nnoremap <F7> :NERDTreeFind<CR>
 
 " Command-T
 let g:CommandTMaxFiles = 20000
