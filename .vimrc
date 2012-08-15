@@ -17,7 +17,7 @@ set hlsearch                                        " highlighting of search mat
 set ignorecase                                      " do case insensitive matching
 set incsearch                                       " incremental search
 set laststatus=2                                    " always show the status line
-set list                                            " show <Tab> and <EOL>
+set list                                            " show <Tab>, <EOL>, and trailing spaces, as defined by listchars option
 "set listchars=tab:▸\ ,trail:·,eol:¬                " characters for displaying in list mode
 set listchars=tab:»\ ,trail:·                       " characters for displaying in list mode
 set mouse=a                                         " enable mouse usage (all modes) in terminals
@@ -161,5 +161,6 @@ runtime macros/matchit.vim   " load matchit (% to bounce from do to end, etc.)
 colorscheme vividchalk  " Best on 'dark'. From github.com/tpope/vim-vividchalk
 
 " Highlight meta and special keys listed with :map, also for text used to show unprintable characters in the text, 'listchars'.
-"highlight SpecialKey ctermfg=Red guifg=Red
+"highlight SpecialKey ctermfg=Red guifg=Red  " for <Tab>
+"highlight NonText ctermfg=Red guifg=Red     " for <EOL>
 
