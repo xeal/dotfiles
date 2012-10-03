@@ -18,7 +18,7 @@
 
 [[ -r /opt/local/etc/bash_completion ]] && . /opt/local/etc/bash_completion
 
-[[ -r /opt/local/etc/bash_completion.d/git ]] && . /opt/local/etc/bash_completion.d/git
+[[ -r /opt/local/share/git-core/git-prompt.sh ]] && . /opt/local/share/git-core/git-prompt.sh
 
 [[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion
 
