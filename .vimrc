@@ -7,6 +7,7 @@ set backspace=indent,eol,start                      " influences the working of 
 set backupdir=~/tmp,.,~/                            " list of directories for the backup file
 set clipboard=unnamed                               " use the clipboard register '*' for all operations which would normally go to the unnamed register
 "set colorcolumn=130                                " highlight column 130
+set completefunc=syntaxcomplete#Complete
 set diffopt=filler,vertical                         " options for using diff mode
 set directory=~/tmp,.,/var/tmp,/tmp                 " list of directory names for the swap file
 set encoding=utf-8                                  " encoding used internally
