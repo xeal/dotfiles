@@ -1,2 +1,10 @@
+\pset border 2
+\pset format wrapped
+\pset linestyle unicode
 \pset null ☐
+\pset pager off
+\set PROMPT1 '%n@%m:%/%x=%# '
+\set PROMPT2 '%n@%m:%/%x-%# '
+\timing
+
 
