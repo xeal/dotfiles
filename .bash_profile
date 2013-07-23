@@ -14,14 +14,16 @@
 
 
 # Completion
+
+# does not exist on OS X Lion
 [[ -r /etc/bash_completion ]] && . /etc/bash_completion
 
+# symlink to /opt/local/etc/profile.d/bash_completion.sh
 [[ -r /opt/local/etc/bash_completion ]] && . /opt/local/etc/bash_completion
 
 [[ -r /opt/local/share/git-core/git-prompt.sh ]] && . /opt/local/share/git-core/git-prompt.sh
 
 [[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion
-
 
 # RVM (https://rvm.io)
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
