@@ -60,8 +60,6 @@ export LSCOLORS=ExGxBxDxCxEgEdxbxgEcEd
 export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:$PATH
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
-export PGDATA='/opt/local/var/db/postgresql92/defaultdb'
-
 export RAILS_ENV=development
 
 
