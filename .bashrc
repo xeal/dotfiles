@@ -62,11 +62,3 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 export RAILS_ENV=development
 
-
-# Prompt
-# ######
-
-TITLEBAR='\[\033]0;\w\007\]'
-PROMPT='\[\033[0;31m\]\u@\h\[\033[0m\]:\[\033[0;32m\]\w\[\033[0m\]$(__git_ps1 "(%s)")\$ '
-PS1="${TITLEBAR}${PROMPT}"
-
