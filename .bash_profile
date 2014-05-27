@@ -1,4 +1,5 @@
-# ~/.bash_profile: executed by bash(1) for login shells.
+# ~/.bash_profile: executed by bash when invoked as an interactive login shell, or as a non-interactive shell with the --login option.
+
 
 # My stuff
 # ########
