@@ -3,8 +3,8 @@
 \pset linestyle unicode
 \pset null ☐
 \pset pager off
+\set HISTSIZE 2000
 \set PROMPT1 '%n@%m:%/%x=%# '
 \set PROMPT2 '%n@%m:%/%x-%# '
 \timing
-
 
