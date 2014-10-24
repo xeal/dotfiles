@@ -46,9 +46,6 @@ export EDITOR=vim
 # memcached
 export EVENT_NOKQUEUE=1
 
-# JVM on OS X defaults to MacRoman - genius!
-export JAVA_TOOL_OPTIONS='-Dfile.encoding=UTF-8 -Dsun.jnu.encoding=UTF-8'
-
 export LANG='en_US.UTF-8'
 
 export LC_ALL='en_US.UTF-8'
