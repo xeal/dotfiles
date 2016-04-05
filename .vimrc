@@ -101,7 +101,7 @@ imap <S-Tab> <C-O><<
 " - ZenCoding.vim : vim plugins for HTML and CSS hi-speed coding (http://www.vim.org/scripts/script.php?script_id=2981)
 
 " Pathogen
-call pathogen#infect()
+execute pathogen#infect()
 
 " taglist
 let Tlist_Exit_OnlyWindow = 1                       " Close Vim if the taglist is the only window
