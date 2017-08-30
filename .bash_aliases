@@ -1,9 +1,9 @@
 # To override the alias use a "\" before it. Ex: "\rm" will call the real "rm" not the alias.
 
-# Interactive operations
-alias rm='rm -i'
-alias cp='cp -i'
-alias mv='mv -i'
+# interactive + verbose
+alias rm='rm -iv'
+alias cp='cp -iv'
+alias mv='mv -iv'
 
 # Default to human readable figures
 alias df='df -h'
