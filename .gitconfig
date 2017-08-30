@@ -8,6 +8,7 @@
   l = log --pretty='format:%C(yellow)%h%x09%C(cyan)%ai%x09%C(red)%aN%Creset%x09%s'
   lg = log --graph --pretty='format:%C(yellow)%h%C(green)%d %Creset%s %C(red)%aN %C(cyan)%ar%Creset'
   lgd = log --oneline --graph --decorate
+  po = remote prune origin
   spp = !git stash && git pull && git stash pop
   ss = status --short
   st = status
@@ -24,17 +25,17 @@
 [color "diff"]
   whitespace = red reverse
 [core]
-  excludesfile = ~/.gitignore
+  excludesfile = ~/.gitignore_global
   pager = less -FRX
 [diff]
-  guitool = gvimdiff
-  tool = gvimdiff
+  guitool = kdiff3
+  tool = kdiff3
 [difftool]
   prompt = false
 [gui]
   fontdiff = -family Menlo -size 10 -weight normal -slant roman -underline 0 -overstrike 0
 [merge]
-  tool = gvimdiff
+  tool = kdiff3
 [push]
   default = upstream
 [rebase]
