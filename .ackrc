@@ -8,3 +8,5 @@
 --type-add=ruby=.ru
 --type-set=text=.txt
 
+--ignore-dir=.idea
+
