@@ -87,14 +87,11 @@ imap <S-Tab> <C-O><<
 " - ack.vim : Plugin for the Perl module / CLI script 'ack' (http://www.vim.org/scripts/script.php?script_id=2572)
 " - Command-T : Fast file navigation for VIM (http://www.vim.org/scripts/script.php?script_id=3025)
 " - fugitive.vim : A Git wrapper so awesome, it should be illegal (http://www.vim.org/scripts/script.php?script_id=2975)
-" - Haml and Sass (http://www.vim.org/scripts/script.php?script_id=1433)
-" - html5.vim : HTML5 omnicomplete funtion and syntax for Vim (http://www.vim.org/scripts/script.php?script_id=3236)
 " - LustyExplorer : Dynamic filesystem and buffer explorer (http://www.vim.org/scripts/script.php?script_id=1890)
 " - NERD tree : A tree explorer plugin for navigating the filesystem (http://www.vim.org/scripts/script.php?script_id=1658)
 " - pathogen.vim : Easy manipulation of 'runtimepath', 'path', 'tags', etc (http://www.vim.org/scripts/script.php?script_id=2332)
 " - ragtag.vim : A set of mappings for HTML, XML, PHP, ASP, eRuby, JSP, and more (http://www.vim.org/scripts/script.php?script_id=1896)
 " - rails.vim : Ruby on Rails: easy file navigation, enhanced syntax highlighting, and more (http://www.vim.org/scripts/script.php?script_id=1567)
-" - snipMate : TextMate-style snippets for Vim (http://www.vim.org/scripts/script.php?script_id=2540)
 " - surround.vim : Delete/change/add parentheses/quotes/XML-tags/much more with ease (http://www.vim.org/scripts/script.php?script_id=1697)
 " - Syntastic : Automatic syntax checking (http://www.vim.org/scripts/script.php?script_id=2736)
 " - taglist.vim : Source code browser (supports C/C++, java, perl, python, tcl, sql, php, etc) (http://www.vim.org/scripts/script.php?script_id=273)
@@ -104,34 +101,31 @@ imap <S-Tab> <C-O><<
 execute pathogen#infect()
 
 " taglist
-let Tlist_Exit_OnlyWindow = 1                       " Close Vim if the taglist is the only window
-let Tlist_Show_One_File = 1                         " Show tags for the current buffer only
-let Tlist_Compact_Format = 1                        " Remove extra information and blank lines from the taglist window
-let Tlist_Enable_Fold_Column = 0                    " Show the fold indicator column in the taglist window
-let Tlist_Use_Right_Window = 1                      " Open the window on the right hand side
-nnoremap <F9> :TlistToggle<CR>
+" let Tlist_Exit_OnlyWindow = 1                       " Close Vim if the taglist is the only window
+" let Tlist_Show_One_File = 1                         " Show tags for the current buffer only
+" let Tlist_Compact_Format = 1                        " Remove extra information and blank lines from the taglist window
+" let Tlist_Enable_Fold_Column = 0                    " Show the fold indicator column in the taglist window
+" let Tlist_Use_Right_Window = 1                      " Open the window on the right hand side
+" nnoremap <F9> :TlistToggle<CR>
 
 " LustyExplorer
-let g:LustyExplorerSuppressRubyWarning = 1
+" let g:LustyExplorerSuppressRubyWarning = 1
 
 " NERD tree
 nnoremap <F8> :NERDTreeToggle<CR>
 nnoremap <F7> :NERDTreeFind<CR>
 
 " Command-T
-let g:CommandTMaxFiles = 20000
+" let g:CommandTMaxFiles = 20000
 
 " Syntastic
 let g:syntastic_enable_signs = 1
 let g:syntastic_auto_loc_list = 1
 
-" Textile
-let g:TextileBrowser="Google Chrome"
-
 " ZenCoding
-let g:user_zen_settings = {
-\  'indentation' : '  '
-\}
+" let g:user_zen_settings = {
+" \  'indentation' : '  '
+" \}
 
 
 "
