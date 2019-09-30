@@ -46,6 +46,8 @@ export EDITOR=vim
 # memcached
 export EVENT_NOKQUEUE=1
 
+export GOPATH="$HOME/go"
+
 export LANG='en_US.UTF-8'
 
 export LC_ALL='en_US.UTF-8'
@@ -56,9 +58,8 @@ export LSCOLORS=ExGxBxDxCxEgEdxbxgEcEd
 
 export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:$PATH
 PATH="/usr/local/opt/postgresql@9.4/bin:$PATH" # Homebrew no longer symlinks Postgres 9.4's binaries to /usr/local/bin/
-PATH="$HOME/.cargo/bin:$PATH" # rust-lang.org
+PATH="$GOPATH/bin:$PATH"
 PATH="$HOME/.rvm/bin:$PATH" # Add RVM to PATH for scripting
 
-export RAILS_ENV=development
 export SCALA_ENV=dev
 
