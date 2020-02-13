@@ -42,5 +42,4 @@
   stat = true
 [user]
   name = Alex Muntean
-  # email = (set via $EMAIL)
-
+  # email = set in /usr/local/etc/gitconfig

@@ -57,9 +57,4 @@ export LESS='-i'
 export LSCOLORS=ExGxBxDxCxEgEdxbxgEcEd
 
 export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:$PATH
-PATH="/usr/local/opt/postgresql@9.4/bin:$PATH" # Homebrew no longer symlinks Postgres 9.4's binaries to /usr/local/bin/
-PATH="$GOPATH/bin:$PATH"
-PATH="$HOME/.rvm/bin:$PATH" # Add RVM to PATH for scripting
-
-export SCALA_ENV=dev
 

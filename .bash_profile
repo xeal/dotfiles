@@ -17,14 +17,9 @@
 # Completion
 # ##########
 
-[[ -r $(brew --prefix)/etc/bash_completion ]] && . $(brew --prefix)/etc/bash_completion
-
-[[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion
-
-
-# RVM (https://rvm.io)
-# ####################
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+[[ -r $(brew --prefix)/etc/bash_completion.d/brew ]] && . $(brew --prefix)/etc/bash_completion.d/brew
+[[ -r $(brew --prefix)/etc/bash_completion.d/git-completion.bash ]] && . $(brew --prefix)/etc/bash_completion.d/git-completion.bash
+[[ -r $(brew --prefix)/etc/bash_completion.d/git-prompt.sh ]] && . $(brew --prefix)/etc/bash_completion.d/git-prompt.sh
 
 
 # Prompt
@@ -33,4 +28,8 @@
 TITLEBAR='\[\033]0;\w\007\]'
 PROMPT='\[\033[0;31m\]\u@\h\[\033[0m\]:\[\033[0;32m\]\w\[\033[0m\]$(__git_ps1 "(%s)")\$ '
 PS1="${TITLEBAR}${PROMPT}"
+
+
+# # Load rbenv automatically
+eval "$(rbenv init -)"
 
