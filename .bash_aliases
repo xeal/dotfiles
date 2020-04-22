@@ -16,8 +16,9 @@ alias ll='ls -la'    # long list + list all
 alias lh='ls -lah'   # long list + list all + human-readable file sizes
 alias le='ls -@lae'  # extended attribute keys and sizes + long list + list all + ACL
 
+# Everything else
+alias be='bundle exec'
 alias diff='diff -s'
 
 # See http://doug.warner.fm/d/blog/2008/07/Version-controlling-my-home-dir
 #alias hgit='git --git-dir=$HOME/.homegit --work-tree=$HOME -c core.excludesfile=$HOME/.homegitignore'
-
