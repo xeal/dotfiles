@@ -1,12 +1,12 @@
 --smart-case
---type-set=capistrano=Capfile
---type-add=capistrano=.cap
---type-add=ruby=.cap
---type-add=ruby=.gemspec
---type-add=ruby=.haml
---type-add=ruby=.rsel
---type-add=ruby=.ru
---type-set=text=.txt
+
+--type-set=cap:is:Capfile
+--type-add=cap:ext:cap
+--type-set=gem:is:Gemfile
+--type-add=ruby:is:Capfile
+--type-add=ruby:is:Gemfile
+--type-add=ruby:ext:cap,gemspec,haml,rsel,ru
+--type-set=txt:ext:txt
 
 --ignore-dir=.idea
 
