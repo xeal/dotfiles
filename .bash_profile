@@ -10,9 +10,6 @@
 # Not under version control
 [[ -r ~/.xealrc ]] && . ~/.xealrc
 
-# Aliases
-[[ -r ~/.bash_aliases ]] && . ~/.bash_aliases
-
 
 # Enviroment variables
 #############################

@@ -1,5 +1,7 @@
 # ~/.bashrc: executed by bash for interactive, non-login shells.
 
+# Aliases
+[[ -r ~/.bash_aliases ]] && . ~/.bash_aliases
 
 # Shell Options
 # #############
