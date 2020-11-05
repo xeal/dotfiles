@@ -9,6 +9,7 @@
   lg = log --graph --pretty='format:%C(yellow)%h%C(green)%d %Creset%s %C(red)%aN %C(cyan)%ar%Creset'
   lgd = log --oneline --graph --decorate
   po = remote prune origin
+  sco = !git stash && git co
   spp = !git stash && git pull && git stash pop
   ss = status --short
   st = status
