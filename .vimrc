@@ -153,7 +153,8 @@ filetype plugin indent on    " enable filetype-specific indenting and plugins
 runtime macros/matchit.vim   " load matchit (% to bounce from do to end, etc.)
 
 "colorscheme solarized  " Nice on both 'light' and 'dark'. From github.com/altercation/vim-colors-solarized
-colorscheme vividchalk  " Best on 'dark'. From github.com/tpope/vim-vividchalk
+"colorscheme vividchalk " Best on 'dark'. From github.com/tpope/vim-vividchalk
+colorscheme landscape   " From https://github.com/itchyny/landscape.vim
 
 " Highlight meta and special keys listed with :map, also for text used to show unprintable characters in the text, 'listchars'.
 highlight SpecialKey ctermfg=LightGreen guifg=LightGreen

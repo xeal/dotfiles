@@ -19,8 +19,8 @@ set lines=999                                   " number of lines in the display
 " MacVim stuff. Maybe also works with gvim.
 "
 
-macm Window.Select\ Next\ Tab       key=<D-S-Right>
-macm Window.Select\ Previous\ Tab   key=<D-S-Left>
+" macm Window.Show\ Next\ Tab       key=<D-S-Right>
+" macm Window.Show\ Previous\ Tab   key=<D-S-Left>
 
 " Map the tabs to Cmd-1..Cmd-9, web browser style
 for i in range(1, 8)
