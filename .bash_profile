@@ -12,7 +12,10 @@
 
 
 # Enviroment variables
-#############################
+######################
+
+# macOS 10.15+
+export BASH_SILENCE_DEPRECATION_WARNING=1
 
 export CLICOLOR=1
 
@@ -31,7 +34,7 @@ export LESS='-i'
 
 export LSCOLORS=ExGxBxDxCxEgEdxbxgEcEd
 
-export PATH=$HOME/bin:$PATH
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 
 
 # History options
@@ -69,5 +72,10 @@ umask 0077
 # Load rbenv automatically
 eval "$(rbenv init -)"
 
+# Sets a shell-specific Ruby version by setting the RBENV_VERSION environment variable
+rbenv shell 2.7.4
+
 # iTerm shell integration
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash" || true
+
+PATH="$HOME/bin:$PATH"
