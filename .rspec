@@ -1,2 +1,5 @@
+# For options that cannot be set via the CLI
+--require "~/.rspec_config.rb"
+
 --format d
---warnings
+#--warnings
