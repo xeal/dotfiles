@@ -5,8 +5,8 @@
   ci = commit
   co = checkout
   ds = diff --staged
-  l = log --pretty='format:%C(yellow)%h%x09%C(cyan)%ai%x09%C(red)%aN%Creset%x09%s'
-  lg = log --graph --pretty='format:%C(yellow)%h%C(green)%d %Creset%s %C(red)%aN %C(cyan)%ar%Creset'
+  l = log --pretty='format:%C(yellow)%h%x09%C(cyan)%ai%x09%C(green)%aN%Creset%x09%s'
+  lg = log --graph --pretty='format:%C(yellow)%h%C(brightblue)%d %Creset%s %C(green)%aN %C(cyan)%ar%Creset'
   lgd = log --oneline --graph --decorate
   po = remote prune origin
   sco = !git stash && git co
@@ -23,8 +23,21 @@
   interactive = auto
   status = auto
   ui = auto
+[color "branch"]
+  current = brightyellow
+  local = yellow
+  remote = green
+  upstream = green
 [color "diff"]
+  meta = yellow
+  frag = cyan
+  old = brightred
+  new = brightgreen
   whitespace = red reverse
+[color "status"]
+  added = green
+  changed = brightred
+  untracked = cyan
 [core]
   excludesfile = ~/.gitignore_global
   pager = less -FRX
