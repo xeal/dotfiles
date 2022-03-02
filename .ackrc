@@ -9,4 +9,4 @@
 --type-set=txt:ext:txt
 
 --ignore-dir=.idea
-
+--ignore-dir=.yarn

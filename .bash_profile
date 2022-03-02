@@ -26,6 +26,8 @@ export EVENT_NOKQUEUE=1
 
 export GOPATH="$HOME/go"
 
+export HOMEBREW_NO_INSTALL_CLEANUP=true
+
 export LANG='en_US.UTF-8'
 
 export LC_ALL='en_US.UTF-8'
@@ -71,9 +73,6 @@ umask 0077
 
 # Load rbenv automatically
 eval "$(rbenv init -)"
-
-# Sets a shell-specific Ruby version by setting the RBENV_VERSION environment variable
-rbenv shell 2.7.4
 
 # iTerm shell integration
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash" || true

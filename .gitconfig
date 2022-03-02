@@ -50,6 +50,8 @@
   prune = true
 [gui]
   fontdiff = -family Menlo -size 10 -weight normal -slant roman -underline 0 -overstrike 0
+[init]
+  defaultBranch = main
 [merge]
   tool = kdiff3
 [push]

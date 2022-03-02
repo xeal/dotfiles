@@ -17,6 +17,7 @@ alias lh='ls -lah'   # long list + list all + human-readable file sizes
 alias le='ls -@lae'  # extended attribute keys and sizes + long list + list all + ACL
 
 # Everything else
+alias aws='aws --no-cli-pager'
 alias be='bundle exec'
 alias diff='diff -s'
 
