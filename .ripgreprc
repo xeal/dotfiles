@@ -1,0 +1,8 @@
+--colors=line:fg:yellow
+--colors=match:bg:cyan
+--colors=match:style:intense
+--colors=match:fg:black
+--colors=path:fg:green
+
+--hidden
+--sort=path
