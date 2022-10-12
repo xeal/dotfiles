@@ -1,0 +1,7 @@
+# Save this in $HOME and point git config at it with:
+#
+#   git config --global core.attributesFile ~/.gitattributes
+
+*.gemspec diff=ruby
+*.rake diff=ruby
+*.rb diff=ruby

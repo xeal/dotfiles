@@ -1,4 +1,5 @@
 [alias]
+  amend = !export GIT_COMMITTER_DATE="$(git show --format='%aI' --no-patch)" && git commit -v --amend
   br = branch
   bv = branch -vv
   catchup = log -p --reverse --topo-order --first-parent -m
@@ -39,6 +40,7 @@
   changed = brightred
   untracked = cyan
 [core]
+  attributesFile = ~/.gitattributes
   excludesfile = ~/.gitignore_global
   pager = less -FRX
 [diff]
