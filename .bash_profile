@@ -24,8 +24,6 @@ export EDITOR=vim
 # memcached
 export EVENT_NOKQUEUE=1
 
-export GOPATH="$HOME/go"
-
 export HOMEBREW_NO_INSTALL_CLEANUP=true
 
 export LANG='en_US.UTF-8'
@@ -43,19 +41,22 @@ export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 # ###############
 
 # Erase duplicates from history
-export HISTCONTROL=erasedups
+HISTCONTROL=erasedups:ignoreboth
 
 # Ignore some controlling instructions
-export HISTIGNORE="[ ]*:&:bg:fg:exit"
+HISTIGNORE="&:bg:exit:fc:fg:history*"
 
 # Store 10k history entries
-export HISTSIZE=10000
+HISTSIZE=10000
 
 # Append current session history to HISTFILE
 shopt -s histappend
 
 # Put a failed history substitution back on the command line
 shopt -s histreedit
+
+# Don't execute immediately the result of a history substitution. Allows further modifications via Readline.
+# shopt -s histverify
 
 
 # Completion
@@ -76,5 +77,8 @@ eval "$(rbenv init -)"
 
 # iTerm shell integration
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash" || true
+
+# Rust
+. "$HOME/.cargo/env"
 
 PATH="$HOME/bin:$PATH"

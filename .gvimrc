@@ -10,6 +10,7 @@ set guifont=Menlo:h12,DejaVu\ Sans\ Mono:h12    " try first Menlo 12pt, then Dej
 set guiheadroom=0                               " GUI: pixels room for window decorations
 set guioptions-=T                               " hide the toolbar
 set guioptions-=r guioptions-=L                 " disable the default scrollbars
+set guioptions+=k                               " Keep the GUI window size when adding/removing a scrollbar, toolbar, tabline, etc.
 set guitablabel=%t                              " GUI: custom label for a tab page (show file name of the file in the buffer)
 set guitabtooltip=%F                            " GUI: custom tooltip for a tab page (show full path of the file in the buffer)
 set lines=999                                   " number of lines in the display
