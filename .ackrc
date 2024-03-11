@@ -10,3 +10,7 @@
 
 --ignore-dir=.idea
 --ignore-dir=.yarn
+
+# set these in an .ackrc file placed under the ~/repo/ dir
+# --ignore-dir=log
+# --ignore-dir=tmp

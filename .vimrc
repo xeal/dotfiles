@@ -4,12 +4,12 @@
 set autoindent sw=2 ts=2 et                         " autoindent with 2 spaces, set tabstop to 2, always expand tabs
 "set background=dark                                " 'dark' or 'light', used for highlight colors
 set backspace=indent,eol,start                      " influences the working of <BS>, <Del>, CTRL-W and CTRL-U in Insert mode
-set backupdir=~/tmp,.,~/                            " list of directories for the backup file
+set backupdir=/tmp,.                                " list of directories for the backup file
 set clipboard=unnamed                               " use the clipboard register '*' for all operations which would normally go to the unnamed register
 "set colorcolumn=130                                " highlight column 130
 set completefunc=syntaxcomplete#Complete
 set diffopt=filler,vertical                         " options for using diff mode
-set directory=~/tmp,.,/var/tmp,/tmp                 " list of directory names for the swap file
+set directory=/tmp,.                                " list of directory names for the swap file
 set encoding=utf-8                                  " encoding used internally
 set fileencodings=ucs-bom,utf-8,sjis,default,latin1 " automatically detected character encodings
 set hidden                                          " hide buffers when they are abandoned
@@ -24,6 +24,7 @@ set listchars=tab:»\ ,trail:▫︎                       " characters for displ
 set mouse=a                                         " enable mouse usage (all modes) in terminals
 set ruler                                           " show cursor line and column in the status line
 set scrolloff=3                                     " minimum nr. of lines above and below cursor
+set shortmess-=S                                    " show search count message when searching
 set showcmd                                         " show (partial) command in status line
 set showmatch                                       " show matching brackets
 set smartcase                                       " do smart case matching
