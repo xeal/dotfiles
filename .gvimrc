@@ -2,11 +2,10 @@
 " GUI options
 "
 set antialias                                   " Mac OS X: use smooth, antialiased fonts
-set background=dark                             " 'dark' or 'light', used for highlight colors
 set columns=200                                 " number of columns in the display
 set grepformat=%f:%l:%m                         " ack-friendly options for :grep
 set grepprg=ack                                 " if we're running in a GUI assume that ack is installed
-set guifont=SF\ Mono:h12,Menlo:h12              " try first SF Mono 12pt then Menlo 12pt
+set guifont=Fira\ Code:h13,Menlo:h13            " try first Fira Code 13pt then Menlo 13pt
 set guiheadroom=0                               " GUI: pixels room for window decorations
 set guioptions-=T                               " hide the toolbar
 set guioptions-=r guioptions-=L                 " disable the default scrollbars

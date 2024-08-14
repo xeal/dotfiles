@@ -2,7 +2,7 @@
 " Let the good options roll
 "
 set autoindent sw=2 ts=2 et                         " autoindent with 2 spaces, set tabstop to 2, always expand tabs
-"set background=dark                                " 'dark' or 'light', used for highlight colors
+"set background=dark                                " 'dark' or 'light', used for highlight colors. It gets overriden by the colorscheme.
 set backspace=indent,eol,start                      " influences the working of <BS>, <Del>, CTRL-W and CTRL-U in Insert mode
 set backupdir=/tmp,.                                " list of directories for the backup file
 set clipboard=unnamed                               " use the clipboard register '*' for all operations which would normally go to the unnamed register
@@ -44,7 +44,7 @@ if has('statusline')
   set statusline+=%{(&fenc==\"\"?&enc:&fenc)},      " encoding
   set statusline+=%{&fileformat}                    " file format
   if exists('g:loaded_fugitive')
-    set statusline+=\ %{fugitive#statusline()}      " http://github.com/tpope/vim-fugitive
+    set statusline+=\ %{fugitive#statusline()}      " github.com/tpope/vim-fugitive
   endif
   set statusline+=%=                                " separation point between left and right aligned items
   set statusline+=%-9.(%l,%c%V%)\ %P                " cursor position/offset
@@ -84,19 +84,19 @@ imap <S-Tab> <C-O><<
 "
 " Plugins
 "
-" List of currently used plugins:
-" - ack.vim : Plugin for the Perl module / CLI script 'ack' (http://www.vim.org/scripts/script.php?script_id=2572)
-" - Command-T : Fast file navigation for VIM (http://www.vim.org/scripts/script.php?script_id=3025)
-" - fugitive.vim : A Git wrapper so awesome, it should be illegal (http://www.vim.org/scripts/script.php?script_id=2975)
-" - LustyExplorer : Dynamic filesystem and buffer explorer (http://www.vim.org/scripts/script.php?script_id=1890)
-" - NERD tree : A tree explorer plugin for navigating the filesystem (http://www.vim.org/scripts/script.php?script_id=1658)
-" - pathogen.vim : Easy manipulation of 'runtimepath', 'path', 'tags', etc (http://www.vim.org/scripts/script.php?script_id=2332)
-" - ragtag.vim : A set of mappings for HTML, XML, PHP, ASP, eRuby, JSP, and more (http://www.vim.org/scripts/script.php?script_id=1896)
-" - rails.vim : Ruby on Rails: easy file navigation, enhanced syntax highlighting, and more (http://www.vim.org/scripts/script.php?script_id=1567)
-" - surround.vim : Delete/change/add parentheses/quotes/XML-tags/much more with ease (http://www.vim.org/scripts/script.php?script_id=1697)
-" - Syntastic : Automatic syntax checking (http://www.vim.org/scripts/script.php?script_id=2736)
-" - taglist.vim : Source code browser (supports C/C++, java, perl, python, tcl, sql, php, etc) (http://www.vim.org/scripts/script.php?script_id=273)
-" - ZenCoding.vim : vim plugins for HTML and CSS hi-speed coding (http://www.vim.org/scripts/script.php?script_id=2981)
+" I don't use most of these plugins anymore so this list is just for reference.
+" - ack.vim : Plugin for the Perl module / CLI script 'ack' (www.vim.org/scripts/script.php?script_id=2572)
+" - Command-T : Fast file navigation for VIM (www.vim.org/scripts/script.php?script_id=3025)
+" - fugitive.vim : A Git wrapper so awesome, it should be illegal (www.vim.org/scripts/script.php?script_id=2975)
+" - LustyExplorer : Dynamic filesystem and buffer explorer (www.vim.org/scripts/script.php?script_id=1890)
+" - NERD tree : A tree explorer plugin for navigating the filesystem (www.vim.org/scripts/script.php?script_id=1658)
+" - pathogen.vim : Easy manipulation of 'runtimepath', 'path', 'tags', etc (www.vim.org/scripts/script.php?script_id=2332)
+" - ragtag.vim : A set of mappings for HTML, XML, PHP, ASP, eRuby, JSP, and more (www.vim.org/scripts/script.php?script_id=1896)
+" - rails.vim : Ruby on Rails: easy file navigation, enhanced syntax highlighting, and more (www.vim.org/scripts/script.php?script_id=1567)
+" - surround.vim : Delete/change/add parentheses/quotes/XML-tags/much more with ease (www.vim.org/scripts/script.php?script_id=1697)
+" - Syntastic : Automatic syntax checking (www.vim.org/scripts/script.php?script_id=2736)
+" - taglist.vim : Source code browser (supports C/C++, java, perl, python, tcl, sql, php, etc) (www.vim.org/scripts/script.php?script_id=273)
+" - ZenCoding.vim : vim plugins for HTML and CSS hi-speed coding (www.vim.org/scripts/script.php?script_id=2981)
 
 " Pathogen
 execute pathogen#infect()
@@ -113,15 +113,15 @@ execute pathogen#infect()
 " let g:LustyExplorerSuppressRubyWarning = 1
 
 " NERD tree
-nnoremap <F8> :NERDTreeToggle<CR>
-nnoremap <F7> :NERDTreeFind<CR>
+" nnoremap <F8> :NERDTreeToggle<CR>
+" nnoremap <F7> :NERDTreeFind<CR>
 
 " Command-T
 " let g:CommandTMaxFiles = 20000
 
 " Syntastic
-let g:syntastic_enable_signs = 1
-let g:syntastic_auto_loc_list = 1
+" let g:syntastic_enable_signs = 1
+" let g:syntastic_auto_loc_list = 1
 
 " ZenCoding
 " let g:user_zen_settings = {
@@ -153,11 +153,8 @@ syntax enable                " enable syntax highlighting
 filetype plugin indent on    " enable filetype-specific indenting and plugins
 runtime macros/matchit.vim   " load matchit (% to bounce from do to end, etc.)
 
-"colorscheme solarized  " Nice on both 'light' and 'dark'. From github.com/altercation/vim-colors-solarized
-"colorscheme vividchalk " Best on 'dark'. From github.com/tpope/vim-vividchalk
-colorscheme landscape   " From https://github.com/itchyny/landscape.vim
+colorscheme landscape-improved-contrast
 
 " Highlight meta and special keys listed with :map, also for text used to show unprintable characters in the text, 'listchars'.
 highlight SpecialKey ctermfg=LightGreen guifg=LightGreen
 highlight NonText ctermfg=LightGreen guifg=LightGreen
-
