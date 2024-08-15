@@ -10,11 +10,12 @@ alias df='df -h'
 alias du='du -h'
 
 # Enable color support for ls and also add handy aliases
-alias ls='ls -F'     # display additional visual cues
-alias l='ls -la'     # long list + list all
-alias ll='ls -la'    # long list + list all
-alias lh='ls -lah'   # long list + list all + human-readable file sizes
-alias le='ls -@lae'  # extended attribute keys and sizes + long list + list all + ACL
+alias ls='ls -F'               # display additional visual cues
+alias l='ls -la'               # long list + list all
+alias ll='ls -la'              # long list + list all
+alias lh='ls -lah'             # long list + list all + human-readable file sizes
+alias le='ls -@lae'            # extended attribute keys and sizes + long list + list all + ACL
+alias lld="ls -la -D '%F %T'"  # long list + list all + ISO timestamps
 
 # Everything else
 alias aws='aws --no-cli-pager'
