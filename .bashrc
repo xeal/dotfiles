@@ -1,10 +1,13 @@
 # ~/.bashrc: executed by bash for interactive, non-login shells.
 
 # Aliases
+#########
+
 [[ -r ~/.bash_aliases ]] && . ~/.bash_aliases
 
+
 # Shell Options
-# #############
+###############
 
 # Don't wait for job termination notification
 # set -o notify
@@ -17,7 +20,7 @@
 
 
 # Prompt
-# ######
+########
 
 [[ -r $(brew --prefix)/etc/bash_completion.d/git-prompt.sh ]] && . $(brew --prefix)/etc/bash_completion.d/git-prompt.sh
 
