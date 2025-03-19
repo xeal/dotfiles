@@ -5,14 +5,15 @@ set autoindent sw=2 ts=2 et                         " autoindent with 2 spaces, 
 "set background=dark                                " 'dark' or 'light', used for highlight colors. It gets overriden by the colorscheme.
 set backspace=indent,eol,start                      " influences the working of <BS>, <Del>, CTRL-W and CTRL-U in Insert mode
 set backupdir=/tmp,.                                " list of directories for the backup file
-set clipboard=unnamed                               " use the clipboard register '*' for all operations which would normally go to the unnamed register
+"set clipboard=unnamed                              " use the clipboard register '*' for all operations which would normally go to the unnamed register
 "set colorcolumn=130                                " highlight column 130
 set completefunc=syntaxcomplete#Complete
+set cursorline                                      " highlight the text line of the cursor with CursorLine. Needs to be set in order to highlight the current line number.
 set diffopt=filler,vertical                         " options for using diff mode
 set directory=/tmp,.                                " list of directory names for the swap file
 set encoding=utf-8                                  " encoding used internally
 set fileencodings=ucs-bom,utf-8,sjis,default,latin1 " automatically detected character encodings
-set hidden                                          " hide buffers when they are abandoned
+set nohidden                                        " unload buffers when they are abandoned. This is the default, but I'm adding it here to document it for my future self.
 set history=1000                                    " number of command-lines that are remembered
 set hlsearch                                        " highlighting of search matches
 set ignorecase                                      " do case insensitive matching
@@ -22,6 +23,7 @@ set list                                            " show <Tab>, <EOL>, and tra
 "set listchars=tab:▸\ ,trail:·,eol:¬                " characters for displaying in list mode
 set listchars=tab:»\ ,trail:▫︎                       " characters for displaying in list mode
 set mouse=a                                         " enable mouse usage (all modes) in terminals
+set number relativenumber                           " show line numbers relative to the cursor
 set ruler                                           " show cursor line and column in the status line
 set scrolloff=3                                     " minimum nr. of lines above and below cursor
 set shortmess-=S                                    " show search count message when searching
@@ -81,25 +83,24 @@ nmap <M-]> :vsp <CR>:exec("tjump ".expand("<cword>"))<CR>
 imap <S-Tab> <C-O><<
 
 
+" Plugins (installed under ~/.vim/pack/)
 "
-" Plugins
+" - commentary.vim: comment stuff out (https://github.com/tpope/vim-commentary)
+" - fugitive.vim: A Git wrapper so awesome, it should be illegal (https://github.com/tpope/vim-fugitive)
+" - surround.vim: Delete/change/add parentheses/quotes/XML-tags/much more with ease (https://github.com/tpope/vim-surround)
+
+
+" Previously used plugins (installed using pathogen)
 "
-" I don't use most of these plugins anymore so this list is just for reference.
 " - ack.vim : Plugin for the Perl module / CLI script 'ack' (www.vim.org/scripts/script.php?script_id=2572)
 " - Command-T : Fast file navigation for VIM (www.vim.org/scripts/script.php?script_id=3025)
-" - fugitive.vim : A Git wrapper so awesome, it should be illegal (www.vim.org/scripts/script.php?script_id=2975)
 " - LustyExplorer : Dynamic filesystem and buffer explorer (www.vim.org/scripts/script.php?script_id=1890)
 " - NERD tree : A tree explorer plugin for navigating the filesystem (www.vim.org/scripts/script.php?script_id=1658)
-" - pathogen.vim : Easy manipulation of 'runtimepath', 'path', 'tags', etc (www.vim.org/scripts/script.php?script_id=2332)
 " - ragtag.vim : A set of mappings for HTML, XML, PHP, ASP, eRuby, JSP, and more (www.vim.org/scripts/script.php?script_id=1896)
 " - rails.vim : Ruby on Rails: easy file navigation, enhanced syntax highlighting, and more (www.vim.org/scripts/script.php?script_id=1567)
-" - surround.vim : Delete/change/add parentheses/quotes/XML-tags/much more with ease (www.vim.org/scripts/script.php?script_id=1697)
 " - Syntastic : Automatic syntax checking (www.vim.org/scripts/script.php?script_id=2736)
 " - taglist.vim : Source code browser (supports C/C++, java, perl, python, tcl, sql, php, etc) (www.vim.org/scripts/script.php?script_id=273)
 " - ZenCoding.vim : vim plugins for HTML and CSS hi-speed coding (www.vim.org/scripts/script.php?script_id=2981)
-
-" Pathogen
-execute pathogen#infect()
 
 " taglist
 " let Tlist_Exit_OnlyWindow = 1                       " Close Vim if the taglist is the only window
@@ -129,22 +130,6 @@ execute pathogen#infect()
 " \}
 
 
-"
-" Commands
-"
-
-" Jump to the last position when reopening a file
-autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-
-" Delete trailing white space when saving certain file types
-autocmd FileType css,eruby,html,java,javascript,perl,php,python,rake,rhtml,ruby,sql,vim,xml,yaml autocmd BufWritePre <buffer> :%s/\s\+$//e
-
-" Command-line commands
-command Clr %s/^>*\s*//e  " Clean reply - for getting rid of the pesky '>>> ' and/or unwanted whitespace when replying to an email
-command Cwd cd %:p:h      " Change working directory to the file in the current window
-command SCR %s/\r/\r/e    " Strip Carriage Returns (^M)
-command STS %s/\s\+$//e   " Strip Trailing Spaces
-
 
 "
 " Syntax and colors
@@ -153,8 +138,33 @@ syntax enable                " enable syntax highlighting
 filetype plugin indent on    " enable filetype-specific indenting and plugins
 runtime macros/matchit.vim   " load matchit (% to bounce from do to end, etc.)
 
+" Clone git@github.com:xeal/vim-color-schemes.git into ~/.vim/pack/xeal/opt/
 colorscheme landscape-improved-contrast
 
 " Highlight meta and special keys listed with :map, also for text used to show unprintable characters in the text, 'listchars'.
-highlight SpecialKey ctermfg=LightGreen guifg=LightGreen
+highlight SpecialKey ctermfg=DarkGray guifg=DarkGray
 highlight NonText ctermfg=LightGreen guifg=LightGreen
+
+
+"
+" Autocommands
+"
+
+" Jump to the last position when reopening a file
+autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
+" Delete trailing white space when saving certain file types
+autocmd FileType css,eruby,html,java,javascript,perl,php,python,rake,rhtml,ruby,sql,vim,xml,yaml autocmd BufWritePre <buffer> :%s/\s\+$//e
+
+" Automatically save & restore the session on exit & start
+" autocmd VimLeavePre * mksession! ~/.session.vim
+" autocmd VimEnter * if filereadable("~/.session.vim") | source ~/.session.vim | endif
+
+
+"
+" Custom commands
+"
+command Clr %s/^>*\s*//e  " Clean reply - for getting rid of the pesky '>>> ' and/or unwanted whitespace when replying to an email
+command Cwd cd %:p:h      " Change working directory to the file in the current window
+command SCR %s/\r/\r/e    " Strip Carriage Returns (^M)
+command STS %s/\s\+$//e   " Strip Trailing Spaces
