@@ -1,6 +1,4 @@
-# https://relishapp.com/rspec/rspec-core/docs/formatters/configurable-colors
-# https://github.com/rspec/rspec-core/blob/main/lib/rspec/core/formatters/console_codes.rb
-
+# https://github.com/rspec/rspec/blob/main/rspec-core/lib/rspec/core/configuration.rb
 
 RSpec.configure do |config|
   config.failure_color = :bold_red # Color used when tests fail (default: :red)

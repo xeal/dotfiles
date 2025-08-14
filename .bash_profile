@@ -1,18 +1,10 @@
 # ~/.bash_profile: executed by bash when invoked as an interactive login shell, or as a non-interactive shell with the --login option.
 
-
-# Load additional dot files
-###########################
-
-# Not much left in .bashrc
-[[ -r ~/.bashrc ]] && . ~/.bashrc
-
-# Not under version control
-[[ -r ~/.xealrc ]] && . ~/.xealrc
-
-
 # Enviroment variables
 ######################
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
+# export HOMEBREW_NO_INSTALL_CLEANUP=true
 
 # macOS 10.15+
 export BASH_SILENCE_DEPRECATION_WARNING=1
@@ -20,11 +12,6 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 export CLICOLOR=1
 
 export EDITOR=vim
-
-# memcached
-export EVENT_NOKQUEUE=1
-
-export HOMEBREW_NO_INSTALL_CLEANUP=true
 
 export LANG='en_US.UTF-8'
 
@@ -34,13 +21,21 @@ export LESS='-i'
 
 export LSCOLORS=ExGxBxDxCxEgEdxbxgEcEd
 
-# export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
-
 # XDG Base Directory Specification
 export XDG_CACHE_HOME="${HOME}/.cache"       # Ephemeral data files
 export XDG_CONFIG_HOME="${HOME}/.config"     # Configuration files
 export XDG_DATA_HOME="${HOME}/.local/share"  # Persistent data files
 export XDG_STATE_HOME="${HOME}/.local/state" # State data files
+
+
+# Load additional dot files
+###########################
+
+# Not much left in .bashrc
+[[ -r "${HOME}/.bashrc" ]] && . "${HOME}/.bashrc"
+
+# Not under version control
+[[ -r "${HOME}/.xealrc" ]] && . "${HOME}/.xealrc"
 
 
 # History options
@@ -68,8 +63,8 @@ shopt -s histreedit
 # Completion
 ############
 
-[[ -r $(brew --prefix)/etc/bash_completion.d/brew ]] && . $(brew --prefix)/etc/bash_completion.d/brew
-[[ -r $(brew --prefix)/etc/bash_completion.d/git-completion.bash ]] && . $(brew --prefix)/etc/bash_completion.d/git-completion.bash
+[[ -r ${HOMEBREW_PREFIX}/etc/bash_completion.d/brew ]] && . ${HOMEBREW_PREFIX}/etc/bash_completion.d/brew
+[[ -r ${HOMEBREW_PREFIX}/etc/bash_completion.d/git-completion.bash ]] && . ${HOMEBREW_PREFIX}/etc/bash_completion.d/git-completion.bash
 
 
 # General stuff
@@ -85,9 +80,9 @@ eval "$(rbenv init -)"
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash" || true
 
 # Rust
-# . "$HOME/.cargo/env"
+[[ -r "${HOME}/.cargo/env" ]] && . "${HOME}/.cargo/env"
 
 # Set up fzf key bindings and fuzzy completion (https://github.com/junegunn/fzf)
 eval "$(fzf --bash)"
 
-PATH="$HOME/bin:$PATH"
+export PATH="${HOME}/bin:${PATH}"

@@ -3,7 +3,7 @@
 # Aliases
 #########
 
-[[ -r ~/.bash_aliases ]] && . ~/.bash_aliases
+[[ -r "${HOME}/.bash_aliases" ]] && . "${HOME}/.bash_aliases"
 
 
 # Shell Options
@@ -22,7 +22,7 @@
 # Prompt
 ########
 
-[[ -r $(brew --prefix)/etc/bash_completion.d/git-prompt.sh ]] && . $(brew --prefix)/etc/bash_completion.d/git-prompt.sh
+[[ -r "${HOMEBREW_PREFIX}/etc/bash_completion.d/git-prompt.sh" ]] && . "${HOMEBREW_PREFIX}/etc/bash_completion.d/git-prompt.sh"
 
 TITLEBAR='\[\033]0;\w\007\]'
 PROMPT='\[\033[0;31m\]\u@\h\[\033[0m\]:\[\033[0;32m\]\w\[\033[0m\]$(__git_ps1 "(%s)")\$ '
