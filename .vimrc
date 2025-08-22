@@ -5,7 +5,7 @@ set autoindent sw=2 ts=2 et                         " autoindent with 2 spaces, 
 "set background=dark                                " 'dark' or 'light', used for highlight colors. It gets overriden by the colorscheme.
 set backspace=indent,eol,start                      " influences the working of <BS>, <Del>, CTRL-W and CTRL-U in Insert mode
 set backupdir=/tmp,.                                " list of directories for the backup file
-"set clipboard=unnamed                              " use the clipboard register '*' for all operations which would normally go to the unnamed register
+set clipboard=unnamed                               " use the clipboard register '*' for all operations which would normally go to the unnamed register
 "set colorcolumn=130                                " highlight column 130
 set completefunc=syntaxcomplete#Complete
 set cursorline                                      " highlight the text line of the cursor with CursorLine. Needs to be set in order to highlight the current line number.
