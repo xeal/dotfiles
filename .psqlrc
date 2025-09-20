@@ -8,4 +8,3 @@
 \set PROMPT1 '%n@%m:%/%x=%# '
 \set PROMPT2 '%n@%m:%/%x-%# '
 \timing
-

@@ -4,7 +4,8 @@
 ######################
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
-# export HOMEBREW_NO_INSTALL_CLEANUP=true
+export HOMEBREW_NO_INSTALL_CLEANUP=1
+export HOMEBREW_NO_ASK=1
 
 # macOS 10.15+
 export BASH_SILENCE_DEPRECATION_WARNING=1
@@ -63,8 +64,9 @@ shopt -s histreedit
 # Completion
 ############
 
-[[ -r ${HOMEBREW_PREFIX}/etc/bash_completion.d/brew ]] && . ${HOMEBREW_PREFIX}/etc/bash_completion.d/brew
-[[ -r ${HOMEBREW_PREFIX}/etc/bash_completion.d/git-completion.bash ]] && . ${HOMEBREW_PREFIX}/etc/bash_completion.d/git-completion.bash
+[[ -r "${HOMEBREW_PREFIX}/etc/bash_completion.d/000_bash_completion_compat.bash.sh" ]] && . "${HOMEBREW_PREFIX}/bash_completion.d/000_bash_completion_compat.bash.sh"
+[[ -r "${HOMEBREW_PREFIX}/etc/bash_completion.d/brew" ]] && . "${HOMEBREW_PREFIX}/etc/bash_completion.d/brew"
+[[ -r "${HOMEBREW_PREFIX}/etc/bash_completion.d/git-completion.bash" ]] && . "${HOMEBREW_PREFIX}/etc/bash_completion.d/git-completion.bash"
 
 
 # General stuff
@@ -85,4 +87,4 @@ test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shel
 # Set up fzf key bindings and fuzzy completion (https://github.com/junegunn/fzf)
 eval "$(fzf --bash)"
 
-export PATH="${HOME}/bin:${PATH}"
+export PATH="${HOME}/bin:${HOME}/.local/bin:${PATH}"

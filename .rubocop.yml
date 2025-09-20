@@ -11,13 +11,20 @@
 
 AllCops:
   DisplayStyleGuide: true
-  TargetRubyVersion: 2.7
+  NewCops: enable
+  TargetRubyVersion: 3.4
 
 Layout/LineLength:
   Max: 120
 
+Metrics/MethodLength:
+  Max: 15
+
 Style/NegatedIf:
   EnforcedStyle: postfix
+
+Style/StringConcatenation:
+  Mode: conservative
 
 Style/StringLiterals:
   EnforcedStyle: double_quotes

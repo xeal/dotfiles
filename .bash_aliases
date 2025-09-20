@@ -22,6 +22,3 @@ alias aws='aws --no-cli-pager'
 alias be='bundle exec'
 alias diff='diff -s'
 alias lsd='lsd -la'
-
-# See http://doug.warner.fm/d/blog/2008/07/Version-controlling-my-home-dir
-#alias hgit='git --git-dir=$HOME/.homegit --work-tree=$HOME -c core.excludesfile=$HOME/.homegitignore'

@@ -14,6 +14,7 @@
   spp = !git stash && git pull && git stash pop
   ss = status --short
   st = status
+  sw = switch
   unstage = reset HEAD
 [branch]
   autosetuprebase = always
@@ -43,6 +44,8 @@
   attributesFile = ~/.gitattributes
   excludesfile = ~/.gitignore_global
   pager = less -FRX
+[credential]
+  helper = osxkeychain
 [diff]
   guitool = kdiff3
   tool = kdiff3
@@ -52,6 +55,8 @@
   prune = true
 [gui]
   fontdiff = -family Menlo -size 10 -weight normal -slant roman -underline 0 -overstrike 0
+[includeif "gitdir:~/repo/"]
+  path = ~/.gitconfig_work
 [init]
   defaultBranch = main
 [merge]
@@ -62,4 +67,4 @@
   stat = true
 [user]
   name = Alex Muntean
-  # email = set in /usr/local/etc/gitconfig
+  # email = set in /opt/homebrew/etc/gitconfig

@@ -23,7 +23,7 @@ set list                                            " show <Tab>, <EOL>, and tra
 "set listchars=tab:▸\ ,trail:·,eol:¬                " characters for displaying in list mode
 set listchars=tab:»\ ,trail:▫︎                       " characters for displaying in list mode
 set mouse=a                                         " enable mouse usage (all modes) in terminals
-set number relativenumber                           " show line numbers relative to the cursor
+set number                                          " show line numbers (use `relativenumber` to show line numbers relative to the cursor)
 set ruler                                           " show cursor line and column in the status line
 set scrolloff=3                                     " minimum nr. of lines above and below cursor
 set shortmess-=S                                    " show search count message when searching
@@ -33,6 +33,7 @@ set smartcase                                       " do smart case matching
 set splitbelow                                      " splitting a window will put the new window below the current one
 set splitright                                      " splitting a window will put the new window right of the current one
 set tags=./tags,tags,tmp/tags                       " filenames for the tag command, separated by spaces or commas
+set termguicolors                                   " make guifg/guibg work even in terminal mode (requires a true-color capable terminal like iTerm2 or Kitty)
 set timeoutlen=500                                  " time out time in milliseconds
 "set title                                          " let Vim set the title of the window
 set ttyfast                                         " indicates a fast terminal connection
