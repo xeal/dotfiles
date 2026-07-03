@@ -3,17 +3,17 @@
 "
 set autoindent sw=2 ts=2 et                         " autoindent with 2 spaces, set tabstop to 2, always expand tabs
 "set background=dark                                " 'dark' or 'light', used for highlight colors. It gets overriden by the colorscheme.
-set backspace=indent,eol,start                      " influences the working of <BS>, <Del>, CTRL-W and CTRL-U in Insert mode
+"set backspace=indent,eol,start                     " influences the working of <BS>, <Del>, CTRL-W and CTRL-U in Insert mode. Default value displayed for reference.
 set backupdir=/tmp,.                                " list of directories for the backup file
 set clipboard=unnamed                               " use the clipboard register '*' for all operations which would normally go to the unnamed register
 "set colorcolumn=130                                " highlight column 130
 set completefunc=syntaxcomplete#Complete
 set cursorline                                      " highlight the text line of the cursor with CursorLine. Needs to be set in order to highlight the current line number.
-set diffopt=filler,vertical                         " options for using diff mode
+set diffopt+=vertical                               " default (from 9.2): "internal,filler,closeoff,indent-heuristic,inline:char"
 set directory=/tmp,.                                " list of directory names for the swap file
 set encoding=utf-8                                  " encoding used internally
 set fileencodings=ucs-bom,utf-8,sjis,default,latin1 " automatically detected character encodings
-set nohidden                                        " unload buffers when they are abandoned. This is the default, but I'm adding it here to document it for my future self.
+"set nohidden                                       " unload buffers when they are abandoned. Default value displayed for reference.
 set history=1000                                    " number of command-lines that are remembered
 set hlsearch                                        " highlighting of search matches
 set ignorecase                                      " do case insensitive matching
@@ -24,10 +24,10 @@ set list                                            " show <Tab>, <EOL>, and tra
 set listchars=tab:»\ ,trail:▫︎                       " characters for displaying in list mode
 set mouse=a                                         " enable mouse usage (all modes) in terminals
 set number                                          " show line numbers (use `relativenumber` to show line numbers relative to the cursor)
-set ruler                                           " show cursor line and column in the status line
+"set ruler                                          " show cursor line and column in the status line. Default value displayed for reference.
 set scrolloff=3                                     " minimum nr. of lines above and below cursor
 set shortmess-=S                                    " show search count message when searching
-set showcmd                                         " show (partial) command in status line
+"set showcmd                                        " show (partial) command in status line. Default value displayed for refence.
 set showmatch                                       " show matching brackets
 set smartcase                                       " do smart case matching
 set splitbelow                                      " splitting a window will put the new window below the current one
