@@ -4,6 +4,7 @@ tags
 # Editor generated files
 .idea/
 .netrwhist
+.ruby-lsp/
 
 # OS generated files
 *~

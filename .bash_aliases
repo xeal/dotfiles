@@ -9,7 +9,19 @@ alias mv='mv -iv'
 alias df='df -h'
 alias du='du -h'
 
-# Enable color support for ls and also add handy aliases
+# aws: CLI pager for output.
+alias aws='aws --no-cli-pager'
+
+# bundler
+alias be='bundle exec'
+
+# diff: report files which are the same, which are otherwise not mentioned
+alias diff='diff -s'
+
+# fd: always search hidden files and show errors
+alias fd='fd --hidden --show-errors'
+
+# ls: enable color support and also add handy aliases
 alias ls='ls -F'               # display additional visual cues
 alias l='ls -la'               # long list + list all
 alias ll='ls -la'              # long list + list all
@@ -17,8 +29,5 @@ alias lh='ls -lah'             # long list + list all + human-readable file size
 alias le='ls -@lae'            # extended attribute keys and sizes + long list + list all + ACL
 alias lld="ls -la -D '%F %T'"  # long list + list all + ISO timestamps
 
-# Everything else
-alias aws='aws --no-cli-pager'
-alias be='bundle exec'
-alias diff='diff -s'
+# lsd: long list + list all
 alias lsd='lsd -la'
